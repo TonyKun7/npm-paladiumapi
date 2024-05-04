@@ -331,4 +331,44 @@ declare module 'paladiumapi' {
             }[];
         };
     }>;
+    export function achievements(offset: number, limit: number): Promise<{
+        status: number;
+        data: {
+            totalCount: number;
+            data: {
+                amount: number;
+                category: string;
+                description: string;
+                icon: string;
+                id: string;
+                name: string;
+            }[];
+        };
+    }>;
+    export function events(offset: number, limit: number): Promise<{
+        status: number;
+        data: {
+            totalCount: number;
+            data: {
+                name: string;
+                description: string;
+                urlWiki: string;
+                urlImage: string;
+                colorBackground: string;
+                color: string;
+            }[];
+        };
+    }>;
+    export function eventsUpcoming(offset: number, limit: number): Promise<{
+        status: number;
+        data: {
+            totalCount: number;
+            data: {
+                name: string;
+                server : string[];
+                start: number;
+                end: number;
+            }[];
+        };
+    }>;
 }

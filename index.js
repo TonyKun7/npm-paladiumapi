@@ -1,4 +1,5 @@
-const axios = require('axios')
+const axios = require('axios');
+const { eventsUpcoming } = require('paladiumapi');
 const base_url = 'https://api.paladium.games/v1/'
 
 module.exports = {
@@ -334,6 +335,48 @@ module.exports = {
     shopMarketItemsListingByPlayer: async (uuid) => {
         try {
             const response = await axios.get(base_url + 'paladium/shop/market/players/' + uuid + '/items');
+            return {
+                status: response.status,
+                data: response.data
+            }
+        } catch (error) {
+            return {
+                status: error.response.status,
+                data: error.response.data
+            }
+        }
+    },
+    achievements: async (offset, limit) => {
+        try {
+            const response = await axios.get(base_url + 'paladium/achievements?offset=' + offset + '&limit=' + limit);
+            return {
+                status: response.status,
+                data: response.data
+            }
+        } catch (error) {
+            return {
+                status: error.response.status,
+                data: error.response.data
+            }
+        }
+    },
+    events: async (offset, limit) => {
+        try {
+            const response = await axios.get(base_url + 'paladium/events?offset=' + offset + '&limit=' + limit);
+            return {
+                status: response.status,
+                data: response.data
+            }
+        } catch (error) {
+            return {
+                status: error.response.status,
+                data: error.response.data
+            }
+        }
+    },
+    eventsUpcoming: async (offset, limit) => {
+        try {
+            const response = await axios.get(base_url + 'paladium/events/upcoming?offset=' + offset + '&limit=' + limit);
             return {
                 status: response.status,
                 data: response.data
