@@ -53,6 +53,11 @@ PaladiumAPI.checkPlayerUsername('tonykun7')
 <PaladiumAPI>.shopMarketItemsByName('bone') // Récupère un article de la boutique par nom.
 <PaladiumAPI>.shopMarketItemsByNameHistory('bone', 0, 100) // Récupère l'historique d'un article de la boutique par nom.
 <PaladiumAPI>.shopMarketItemsListingByPlayer('uuid') // Récupère les listes d'articles de la boutique par joueur.
+<PaladiumAPI>.achievements(0, 100) // Récupère les informations sur les différents achivements
+<PaladiumAPI>.events(0, 100) // Récupère les informations sur les différents évents disponibles
+<PaladiumAPI>.eventsUpcoming(0, 100) // Récupère la liste des prochains évents
+
+
 
 /*
   Informations importantes
