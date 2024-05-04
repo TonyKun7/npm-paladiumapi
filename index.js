@@ -1,5 +1,4 @@
 const axios = require('axios');
-const { eventsUpcoming } = require('paladiumapi');
 const base_url = 'https://api.paladium.games/v1/'
 
 module.exports = {
