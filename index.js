@@ -372,6 +372,20 @@ module.exports = {
                 data: error.response.data
             }
         }
+    },
+    getPlayerAchievements: async (uuid, offset, limit) => {
+        try {
+            const response = await axios.get(base_url + 'paladium/player/profile/' + uuid + 'achievements?offset=' + offset + '&limit=' + limit);
+            return {
+                status: response.status,
+                data: response.data
+            }
+        } catch (error) {
+            return {
+                status: error.response.status,
+                data: error.response.data
+            }
+        }
     }
 
 }

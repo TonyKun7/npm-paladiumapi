@@ -363,4 +363,15 @@ declare module 'paladiumapi' {
             }[];
         };
     }>;
+    export function getPlayerAchievements(uuid: string, offset: number, limit: number): Promise<{
+        status: number;
+        data: {
+            totalCount: number;
+            data: {
+                id: string;
+                progress : number;
+                completed: string;
+            }[];
+        };
+    }>;
 }

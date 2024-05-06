@@ -34,7 +34,8 @@ PaladiumAPI.checkPlayerUsername('tonykun7')
 <PaladiumAPI>.getPlayer('name') // Récupère les informations d'un joueur.
 <PaladiumAPI>.getPlayerByUUID('uuid') // Récupère les informations d'un joueur par UUID.
 <PaladiumAPI>.getPlayerClicker('uuid') // Récupère les informations du joueur pour le jeu Clicker.
-<PaladiumAPI>.getPlayerGames() // Récupère les jeux du joueur.
+<PaladiumAPI>.getPlayerGames() // Récupère les informations sur les minijeux du joueur.
+<PaladiumAPI>.getPlayerAchievements('uuid', '0', '10') // Récupere les achivements du joueur.
 <PaladiumAPI>.factionLeaderboard() // Récupère le classement des factions.
 <PaladiumAPI>.factionQuest() // Récupère la quête de faction.
 <PaladiumAPI>.factionOnYourMarks() // Récupère les informations sur les marques de faction.
@@ -52,9 +53,9 @@ PaladiumAPI.checkPlayerUsername('tonykun7')
 <PaladiumAPI>.shopMarketItemsByName('bone') // Récupère un article de la boutique par nom.
 <PaladiumAPI>.shopMarketItemsByNameHistory('bone', 0, 100) // Récupère l'historique d'un article de la boutique par nom.
 <PaladiumAPI>.shopMarketItemsListingByPlayer('uuid') // Récupère les listes d'articles de la boutique par joueur.
-<PaladiumAPI>.achievements(0, 100) // Récupère les informations sur les différents achivements
-<PaladiumAPI>.events(0, 100) // Récupère les informations sur les différents évents disponibles
-<PaladiumAPI>.eventsUpcoming(0, 100) // Récupère la liste des prochains évents
+<PaladiumAPI>.achievements(0, 100) // Récupère les informations sur les différents achivements.
+<PaladiumAPI>.events(0, 100) // Récupère les informations sur les différents évents disponibles.
+<PaladiumAPI>.eventsUpcoming(0, 100) // Récupère la liste des prochains évents.
 
 
 
