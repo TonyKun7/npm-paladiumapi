@@ -45,7 +45,6 @@ PaladiumAPI.checkPlayerUsername('tonykun7')
 <PaladiumAPI>.rankingTrixiumPlayerLeaderboard() // Récupère le classement des joueurs Trixium.
 <PaladiumAPI>.rankingTrixiumPlayer('uuid') // Récupère la position d'un joueur Trixium dans le classement.
 <PaladiumAPI>.rankingTrixiumFactionLeaderboard() // Récupère le classement des factions Trixium.
-<PaladiumAPI>.rankingPositionFaction('uuid') // Récupère la position d'une faction dans le classement.
 <PaladiumAPI>.shopAdminItems(0, 100) // Récupère les articles administratifs de la boutique.
 <PaladiumAPI>.shopAdminItemsByName('bone') // Récupère un article administratif de la boutique par nom.
 <PaladiumAPI>.shopMarketCategories(0, 100) // Récupère les catégories de la boutique.

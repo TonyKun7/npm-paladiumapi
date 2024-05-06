@@ -233,20 +233,6 @@ module.exports = {
             }
         }
     },
-    rankingPositionFaction: async (uuid) => {
-        try {
-            const response = await axios.get(base_url + 'paladium/ranking/faction/' + uuid);
-            return {
-                status: response.status,
-                data: response.data
-            }
-        } catch (error) {
-            return {
-                status: error.response.status,
-                data: error.response.data
-            }
-        }
-    },
     shopAdminItems: async (offset, limit) => {
         try {
             const response = await axios.get(base_url + 'paladium/shop/admin/items?offset=' + offset + '&limit=' + limit);

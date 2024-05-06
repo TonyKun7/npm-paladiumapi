@@ -228,14 +228,6 @@ declare module 'paladiumapi' {
             totalCount: number;
         }
     }>;
-    export function rankingPositionFaction(uuid: string): Promise<{
-        status: number;
-        data: {
-            position: number;
-            uuid: string;
-            value: number;
-        };
-    }>;
     export function shopAdminItems(offset: number, limit: number): Promise<{
         status: number;
         data: {
