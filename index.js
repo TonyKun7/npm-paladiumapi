@@ -130,7 +130,6 @@ module.exports = {
 
 }
 
-// La fonction ici n'est pas eexportée (donc pas nécessaire de faire ses defs typescript)
 const makeRequest = async (url) => {
     try {
         const response = await axios.get(url);
