@@ -1,4 +1,14 @@
 declare module 'paladiumapi' {
+    interface SearchOptions {
+        /**
+         * The number of items to skip before starting to collect the result set.
+         */
+        limit?: number,
+        /**
+         * The number of items to return.
+         */
+        offset?: number,
+    }
     export function checkPlayerUsername(username: string): Promise<{ status: number; data: { id: string; name: string } }>;
     export function status(): Promise<{
         status: number;
@@ -228,7 +238,7 @@ declare module 'paladiumapi' {
             totalCount: number;
         }
     }>;
-    export function shopAdminItems(offset: number, limit: number): Promise<{
+    export function shopAdminItems(options?: SearchOptions): Promise<{
         status: number;
         data: {
             totalCount: number;
@@ -253,14 +263,14 @@ declare module 'paladiumapi' {
             category: string;
         };
     }>;
-    export function shopMarketCategories(offset: number, limit: number): Promise<{
+    export function shopMarketCategories(options?: SearchOptions): Promise<{
         status: number;
         data: {
             totalCount: number;
             data: string[];
         };
     }>;
-    export function shopMarketItems(offset: number, limit: number): Promise<{
+    export function shopMarketItems(options?: SearchOptions): Promise<{
         status: number;
         data: {
             totalCount: number;
@@ -285,7 +295,7 @@ declare module 'paladiumapi' {
             countListing: number;
         };
     }>;
-    export function shopMarketItemsByNameHistory(name: string, offset: number, limit: number): Promise<{
+    export function shopMarketItemsByNameHistory(name: string, options?: SearchOptions): Promise<{
         status: number;
         data: {
             totalCount: number;
@@ -323,7 +333,7 @@ declare module 'paladiumapi' {
             }[];
         };
     }>;
-    export function achievements(offset: number, limit: number): Promise<{
+    export function achievements(options?: SearchOptions): Promise<{
         status: number;
         data: {
             totalCount: number;
@@ -337,7 +347,7 @@ declare module 'paladiumapi' {
             }[];
         };
     }>;
-    export function events(offset: number, limit: number): Promise<{
+    export function events(options?: SearchOptions): Promise<{
         status: number;
         data: {
             totalCount: number;
@@ -351,7 +361,7 @@ declare module 'paladiumapi' {
             }[];
         };
     }>;
-    export function eventsUpcoming(offset: number, limit: number): Promise<{
+    export function eventsUpcoming(options?: SearchOptions): Promise<{
         status: number;
         data: {
             totalCount: number;
@@ -363,7 +373,7 @@ declare module 'paladiumapi' {
             }[];
         };
     }>;
-    export function getPlayerAchievements(uuid: string, offset: number, limit: number): Promise<{
+    export function getPlayerAchievements(uuid: string, options?: SearchOptions): Promise<{
         status: number;
         data: {
             totalCount: number;
