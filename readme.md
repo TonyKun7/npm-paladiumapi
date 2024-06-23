@@ -35,27 +35,27 @@ PaladiumAPI.checkPlayerUsername('tonykun7')
 <PaladiumAPI>.getPlayerByUUID('uuid') // Récupère les informations d'un joueur par UUID.
 <PaladiumAPI>.getPlayerClicker('uuid') // Récupère les informations du joueur pour le jeu Clicker.
 <PaladiumAPI>.getPlayerGames() // Récupère les informations sur les minijeux du joueur.
-<PaladiumAPI>.getPlayerAchievements('uuid', '0', '10') // Récupere les achivements du joueur.
+<PaladiumAPI>.getPlayerAchievements('uuid', SearchOptions) // Récupere les achivements du joueur.
 <PaladiumAPI>.factionLeaderboard() // Récupère le classement des factions.
 <PaladiumAPI>.factionQuest() // Récupère la quête de faction.
 <PaladiumAPI>.factionOnYourMarks() // Récupère les informations sur les marques de faction.
 <PaladiumAPI>.getFactionByName('name') // Récupère les informations d'une faction par son nom.
-<PaladiumAPI>.rankingLeaderboardByIdAndPage('money', 1) // Récupère le classement pour un ID spécifique et une page donnée.
+<PaladiumAPI>.rankingLeaderboardByIdAndPage('money', SearchOptions) // Récupère le classement pour un ID spécifique et une page donnée.
 <PaladiumAPI>.rankingPositionPlayer('uuid') // Récupère la position d'un joueur dans le classement.
-<PaladiumAPI>.rankingPositionPlayerById('uuid', 1) // Récupère la position d'un joueur dans le classement pour un ID spécifique.
+<PaladiumAPI>.rankingPositionPlayerById('uuid', SearchOptions) // Récupère la position d'un joueur dans le classement pour un ID spécifique.
 <PaladiumAPI>.rankingTrixiumPlayerLeaderboard() // Récupère le classement des joueurs Trixium.
 <PaladiumAPI>.rankingTrixiumPlayer('uuid') // Récupère la position d'un joueur Trixium dans le classement.
 <PaladiumAPI>.rankingTrixiumFactionLeaderboard() // Récupère le classement des factions Trixium.
-<PaladiumAPI>.shopAdminItems(0, 100) // Récupère les articles administratifs de la boutique.
+<PaladiumAPI>.shopAdminItems(SearchOptions) // Récupère les articles administratifs de la boutique.
 <PaladiumAPI>.shopAdminItemsByName('bone') // Récupère un article administratif de la boutique par nom.
-<PaladiumAPI>.shopMarketCategories(0, 100) // Récupère les catégories de la boutique.
-<PaladiumAPI>.shopMarketItems(0, 100) // Récupère les articles de la boutique.
+<PaladiumAPI>.shopMarketCategories(SearchOptions) // Récupère les catégories de la boutique.
+<PaladiumAPI>.shopMarketItems(SearchOptions) // Récupère les articles de la boutique.
 <PaladiumAPI>.shopMarketItemsByName('bone') // Récupère un article de la boutique par nom.
-<PaladiumAPI>.shopMarketItemsByNameHistory('bone', 0, 100) // Récupère l'historique d'un article de la boutique par nom.
+<PaladiumAPI>.shopMarketItemsByNameHistory('bone', SearchOptions) // Récupère l'historique d'un article de la boutique par nom.
 <PaladiumAPI>.shopMarketItemsListingByPlayer('uuid') // Récupère les listes d'articles de la boutique par joueur.
-<PaladiumAPI>.achievements(0, 100) // Récupère les informations sur les différents achivements.
-<PaladiumAPI>.events(0, 100) // Récupère les informations sur les différents évents disponibles.
-<PaladiumAPI>.eventsUpcoming(0, 100) // Récupère la liste des prochains évents.
+<PaladiumAPI>.achievements(SearchOptions) // Récupère les informations sur les différents achivements.
+<PaladiumAPI>.events(SearchOptions) // Récupère les informations sur les différents évents disponibles.
+<PaladiumAPI>.eventsUpcoming(SearchOptions) // Récupère la liste des prochains évents.
 
 
 
@@ -65,6 +65,16 @@ PaladiumAPI.checkPlayerUsername('tonykun7')
   Le uuid dois être formater sous cette forme xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   Liste des ID money, job.alchemist, job.hunter, job.miner, job.farmer, boss, egghunt, end, chorus, koth, clicker
 */
+```
+
+## Typage
+
+### SearchOptions
+```js
+{
+    offset: number
+    limit: number
+}
 ```
 
 ## Contribution

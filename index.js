@@ -83,56 +83,57 @@ module.exports = {
         const url = `${base_url}/paladium/ranking/trixium/faction`
         return makeRequest(url)
     },
-    shopAdminItems: async (offset, limit) => {
-        const url = `${base_url}/paladium/shop/admin/items?offset=${offset}&limit=${limit}`
-        return makeRequest(url)
+    shopAdminItems: async (options = null) => {
+        const url = `${base_url}/paladium/shop/admin/items`
+        return makeRequest(url, options)
     },
     shopAdminItemsByName: async (name) => {
         const url = `${base_url}/paladium/shop/admin/items/${name}`
         return makeRequest(url)
     },
-    shopMarketCategories: async (offset, limit) => {
-        const url = `${base_url}/paladium/shop/market/categories?offset=${offset}&limit=${limit}`
-        return makeRequest(url)
+    shopMarketCategories: async (options = null) => {
+        const url = `${base_url}/paladium/shop/market/categories`
+        return makeRequest(url, options)
     },
-    shopMarketItems: async (offset, limit) => {
-        const url = `${base_url}/paladium/shop/market/items?offset=${offset}&limit=${limit}`
-        return makeRequest(url)
+    shopMarketItems: async (options = null) => {
+        const url = `${base_url}/paladium/shop/market/items`
+        return makeRequest(url, options)
     },
     shopMarketItemsByName: async (name) => {
         const url = `${base_url}/paladium/shop/market/items/${name}`
         return makeRequest(url)
     },
-    shopMarketItemsByNameHistory: async (name, offset, limit) => {
-        const url = `${base_url}/paladium/shop/market/items/${name}/history?offset=${offset}&limit=${limit}`
-        return makeRequest(url)
+    shopMarketItemsByNameHistory: async (name, options = null) => {
+        const url = `${base_url}/paladium/shop/market/items/${name}/history`
+        return makeRequest(url, options)
     },
     shopMarketItemsListingByPlayer: async (uuid) => {
         const url = `${base_url}/paladium/shop/market/players/${uuid}/items`
         return makeRequest(url)
     },
-    achievements: async (offset, limit) => {
-        const url = `${base_url}/paladium/achievements?offset=${offset}&limit=${limit}`
-        return makeRequest(url)
+    achievements: async (options = null) => {
+        const url = `${base_url}/paladium/achievements`
+        return makeRequest(url, options)
     },
-    events: async (offset, limit) => {
-        const url = `${base_url}/paladium/events?offset=${offset}&limit=${limit}`
-        return makeRequest(url)
+    events: async (options = null) => {
+        const url = `${base_url}/paladium/events`
+        return makeRequest(url, options)
     },
-    eventsUpcoming: async (offset, limit) => {
-        const url = `${base_url}/paladium/events/upcoming?offset=${offset}&limit=${limit}`
-        return makeRequest(url)
+    eventsUpcoming: async (options = null) => {
+        const url = `${base_url}/paladium/events/upcoming`
+        return makeRequest(url, options)
     },
-    getPlayerAchievements: async (uuid, offset, limit) => {
-        const url = `${base_url}/paladium/player/profile/${uuid}/achievements?offset=${offset}&limit=${limit}`
-        return makeRequest(url)
+    getPlayerAchievements: async (uuid, options = null) => {
+        const url = `${base_url}/paladium/player/profile/${uuid}/achievements`
+        return makeRequest(url, options)
     }
 
 }
 
-const makeRequest = async (url) => {
+const makeRequest = async (url, opt = null) => {
     try {
-        const response = await axios.get(url);
+
+        const response = await axios.get(url + (opt ? '?' + new URLSearchParams(opt): ''));
         return {
             status: response.status,
             data: response.data
